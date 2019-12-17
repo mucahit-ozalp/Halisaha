@@ -22,6 +22,62 @@ router.get("/hakkimizda", function(req, res) {
 router.get("/randevual", function(req, res) {
   res.render("randevual");
 });
+router.post("/randevual",function(req,res){
+  var isim =req.body.rIsim;
+  var email =req.body.rEmail;
+  var telefon=req.body.rTel;
+  var servis;
+  
+  var servisDeger=document.getElementById('servis').nodeValue;
+  if(degerServis=="servisEvet")
+  {
+    servis=req.body.rServisEvet;
+  }
+  else
+  {
+    servis=req.body.rServisHayır;
+  }
+  var video;
+  var videoDeger=document.getElementById("rVideo");
+  if(videoDeger=="videoEvet")
+  {
+    video=req.body.rVideoEvet;
+  }
+  else
+  {
+    video=req.body.rServisHayır;
+  }
+  var hakem;
+  var hakemDeger=document.getElementById("rhakem");
+  if(hakemDeger=="hakemEvet")
+  {
+    hakem=req.body.rHakemEvet;
+  }
+  else
+  {
+    hakem=req.body.rHakemHayır;
+  }
+
+  var eksikOyuncu=req.body.rOyuncu;
+
+  var odeme;
+  var odemeDeger=document.getElementById("rOdeme");
+  if(odemeDeger=="nakit")
+  {
+    odeme=req.body.rOdemeNakit;
+    console.log(odeme);
+  }
+  else
+  {
+    odeme=req.body.rOdemeKart;
+  }
+
+  
+
+
+
+  
+});
 router.get("/kayitli-randevular", function(req, res) {
   res.render("kayitli-randevular");
 });

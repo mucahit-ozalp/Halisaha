@@ -18,7 +18,8 @@
         <div class="row">
           <div class="booking-form">
 
-            <form>
+            <form action="/randevual" method="POST"> 
+              
               <div class="form-header">
                 <h1>Randevu</h1>
               </div>
@@ -26,54 +27,54 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <span class="form-label">İsim</span>
-                    <input class="form-control" type="text" placeholder="İsim giriniz">
+                    <input name="rIsim" class="form-control"   type="text" placeholder="İsim giriniz">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <span class="form-label">E-mail</span>
-                    <input class="form-control" type="email" placeholder="Email adresinizi giriniz">
+                    <input name="rEmail" class="form-control" type="email" placeholder="Email adresinizi giriniz">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <span class="form-label">Telefon</span>
-                <input class="form-control" type="tel" placeholder="Telefon numaranızı giriniz">
+                <input  name="rTel" class="form-control" name="randevual-tel" type="tel" placeholder="Telefon numaranızı giriniz">
               </div>
-              <div class="form-check">
+              <div class="form-check" id="rServis">
                 <span class="form-label">Servis ister misin? </span>
-                <input  type="radio" class="form-check-input" id ="servisEvet"name="servisSecenegi">
-                <label class="form-check-label" for="servisEvet">Evet</label>  
+                <input name="rServisEvet"  type="radio" class="form-check-input" id ="servisEvet"name="servisSecenegi">
+                <label class="form-check-label"  for="servisEvet">Evet</label>  
               </div>
               <div class="form-check">
-                <input  type="radio" class="form-check-input" id ="servisHayır"name="servisSecenegi" >
+                <input name="rServisHayır"  type="radio" class="form-check-input" id ="servisHayır"name="servisSecenegi" >
                 <label class="form-check-label" for="servisHayır">Hayır</label>
               </div>
 
-              <div class="form-check">
+              <div class="form-check" id="rVideo">
                 <span class="form-label">Video ister misin?</span>
-                <input  type="radio" class="form-check-input" id ="videoEvet"name="videoSecenegi" >
+                <input name="rVideoEvet" type="radio" class="form-check-input" id ="videoEvet"name="videoSecenegi" >
                 <label class="form-check-label" for="videoEvet">Evet</label>                     
               </div>
               <div class="form-check">
-                <input  type="radio" class="form-check-input" id ="videoEvet"name="videoSecenegi" >
+                <input name="rVideoHayır" type="radio" class="form-check-input" id ="videoHayır"name="videoSecenegi" >
                 <label class="form-check-label" for="hakemRed">Hayır</label>
               </div>
 
-              <div class="form-check">
+              <div class="form-check" id="rhakem">
                 <span class="form-label">Hakem ister misin?</span>
-                <input  type="radio" class="form-check-input" id ="hakemEvet"name="hakemSecenegi" >
+                <input name="rHakemEvet" type="radio" class="form-check-input" id ="hakemEvet"name="hakemSecenegi" >
                 <label class="form-check-label" for="hakemEvet">Evet</label>
               </div>
               <div class="form-check">
-                <input  type="radio" class="form-check-input" id ="hakemHayır"name="hakemSecenegi" >
+                <input name="rHakemHayır" type="radio" class="form-check-input" id ="hakemHayır"name="hakemSecenegi" >
                 <label class="form-check-label" for="hakemHayır">Hayır</label>
               </div>
 
 
-              <div class="form-group" id="combo-eksikoyuncu">
+              <div class="form-group" id="combo-eksikOyuncu">
                 <span class="form-label ">Eksik oyuncu ?</span>
-                <select class="form-control">
+                <select name="rOyuncu" class="form-control">
 
 
                   <option>0</option>
@@ -85,14 +86,14 @@
                 <span class="select-arrow"></span>
               </div>
 
-              <div class="form-check">
+              <div class="form-check" id="rOdeme">
                 <span class="form-label">Ödeme seçeneği?</span>
-                <input type="radio" class="form-check-input" id="nakit" name="OdemeSecenegi" unchecked>
+                <input name="rOdemeNakit" type="radio" class="form-check-input" id="nakit" name="OdemeSecenegi" unchecked>
                 <label class="form-check-label" for="nakit">Nakit</label>
               </div>
 
               <div class="form-check">
-                <input type="radio" class="form-check-input" id="kredi-karti" name="OdemeSecenegi">
+                <input name="rOdemeKart"type="radio" class="form-check-input" id="kredi-karti" name="OdemeSecenegi">
                 <label class="form-check-label" for="kredi-karti">Kredi Kartı</label>
               </div>
 
@@ -101,7 +102,7 @@
                 <div class="col-sm-5">
                   <div class="form-group">
                     <span class="form-label">Randevu Tarihi</span>
-                    <input class="form-control" type="date" required>
+                    <input name="rTarih" class="form-control" type="date" required>
                   </div>
                 </div>
                 <div class="col-sm-7">
@@ -109,7 +110,7 @@
                     <div class="col-sm-4">
                       <div class="form-group">
                         <span class="form-label">Saat</span>
-                        <select class="form-control">
+                        <select name="rSaat" class="form-control">
 
                           <option>10</option>
                           <option>11</option>
